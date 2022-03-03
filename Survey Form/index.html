@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+    </style>
+<meta charset="utf-8">
+<title>My Survey page</title>
+</head>
+<body id="main">
+
+    <h1 id="title">My Survey</h1>
+
+    <p id="description">Complete this survey.</p>
+
+    <form id="survey-form">
+        <label for="name" id="name-label">
+            <input type="text" id="name"  placeholder="John Doe" required>
+            name
+        </label>
+
+        <label for="email"  id="email-label"  >
+            <input type="email" id="email" placeholder="me@example.com" required>
+            email
+        </label>
+
+        <label for="number" id="number-label"  placeholder="1">
+            <input type="number" id="number" min="1" max="5" placeholder="1" required>
+            number
+        </label>
+
+        <label for="dropdown">Choose one:</label>
+
+        <select name="dropdown" id="dropdown">
+            <option value="choice1">choice1</option>
+            <option value="choice2">choice2</option>
+            <option value="choice3">choice3</option>
+            <option value="choice4">choice4</option>
+        </select> 
+        
+        <input type="radio" id="choice10" name="choice" value="choice10">
+        <label for="choice10">choice1</label><br>
+        <input type="radio" id="choice20" name="choice" value="choice20">
+        <label for="choice20">choice2</label><br>
+        <input type="radio" id="choice30" name="choice" value="choice30">
+        <label for="choice30">choice3</label>
+
+
+        <input type="checkbox" id="choice100" name="choice100" value="choice100">
+        <label for="choice100"> choice1</label><br>
+        <input type="checkbox" id="choice200" name="choice200" value="choice200">
+        <label for="choice200"> choice2</label><br>
+        <input type="checkbox" id="choice300" name="choice300" value="choice300">
+        <label for="choice300"> choice3</label>
+
+        <textarea name="message" rows="10" cols="30">
+            Type here.
+        </textarea> 
+
+        <input type="submit" value="Submit" id="submit">
+
+    </form>
+
+
+</body>
+</html>
