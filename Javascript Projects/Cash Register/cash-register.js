@@ -39,17 +39,11 @@ function checkCashRegister(price, cash, cid) {
     sum = Math.round(sum * 100) / 100;
     // Makes variable have 2 decimal places
     sum = sum.toFixed(2);
-  
-    // Log the sum & unchanged variables for diagnostics
-    console.log(sum);
-    console.log(unchanged);
 
     // If sum is less than unchanged
     if (sum < unchanged) {
         // Change status to "INSUFFICIENT_FUNDS"
         statusChange.status = "INSUFFICIENT_FUNDS";
-        // Log the variable for diagnostics
-        console.log(statusChange);
         // return the statusChange
         return statusChange;
         // If the sum is equal to unchanged
@@ -58,16 +52,12 @@ function checkCashRegister(price, cash, cid) {
         statusChange.status = "CLOSED";
         // Make the change in the return object the original array
         statusChange.change = [...cidCopy];
-        // Log the variable for diagnostics
-        console.log(statusChange);
         // return the statusChange
         return statusChange;
         // If none of the previous statements work
     } else {
         // Change status to "OPEN"
         statusChange.status = "OPEN";
-        // Log the variable for diagnostics
-        console.log(statusChange);
   
         // While change is greater than or equal to 100
         while (change >= 100) {
@@ -86,11 +76,7 @@ function checkCashRegister(price, cash, cid) {
             }
         }
         // Round the variable and fix it to 2 decimal places
-        change = Math.round(change * 100) / 100;
-        // Makes variable have 2 decimal places
-        change = change.toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
+        change = (Math.round(change * 100) / 100).toFixed(2);
   
         // While change is greater than or equal to 20
         while (change >= 20) {
@@ -110,8 +96,6 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
   
         // While change is greater than or equal to 10
         while (change >= 10) { 
@@ -131,8 +115,6 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
   
         // While change is greater than or equal to 5
         while (change >= 5) {
@@ -152,9 +134,7 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
-  
+
         // While change is greater than or equal to 1
         while (change >= 1) {
             // If the reverse argument copy is greater than or equal to 1
@@ -173,8 +153,6 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
   
         // While change is greater than or equal to 0.25
         while (change >= 0.25) {
@@ -194,9 +172,7 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
-  
+
         // While change is greater than or equal to 0.1
         while (change >= 0.1) {
             // If the reverse argument copy is greater than or equal to 0.1
@@ -215,9 +191,7 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
-  
+
         // While change is greater than or equal to 0.05
         while (change >= 0.05) {
             // If the reverse argument copy is greater than or equal to 0.05
@@ -236,9 +210,7 @@ function checkCashRegister(price, cash, cid) {
         }
         // Round the variable and fix it to 2 decimal places
         change = (Math.round(change * 100) / 100).toFixed(2);
-        // Log the variable for diagnostics
-        console.log(change);
-  
+
         // While change is greater than or equal to 0.01
         while (change >= 0.01) {
             // If the reverse argument copy is greater than or equal to 0.01
@@ -249,6 +221,8 @@ function checkCashRegister(price, cash, cid) {
                 cidCopyRev[8][1] -= 0.01;
                 // Subtract 0.01 from the change
                 change -= 0.01;
+                // Round the variable and fix it to 2 decimal places
+                change = (Math.round(change * 100) / 100).toFixed(2);
                 // If not
             } else {
                  // Break the while loop
@@ -257,18 +231,10 @@ function checkCashRegister(price, cash, cid) {
         }
     }
     // Round the variable and fix it to 2 decimal places
-    change = Math.round(change * 100) / 100;
-    // Makes variable have 2 decimal places
-    change = change.toFixed(2);
-    // Log the variable for diagnostics
-    console.log(change);
+    change = (Math.round(change * 100) / 100).toFixed(2);
   
     drawer = drawer.filter(item => item[1] !== 0);
-    // Log the variable for diagnostics
-    console.log(drawer);
     statusChange.change = [...drawer];
-    // Log the variable for diagnostics
-    console.log(statusChange);
 
     // If change is greater than zero
     if (change > 0) {
