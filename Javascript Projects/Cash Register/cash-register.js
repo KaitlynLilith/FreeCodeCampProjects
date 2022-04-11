@@ -73,11 +73,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 100
         while (change >= 100) {
+            // If the reverse argument copy is greater than or equal to 100
             if (cidCopyRev[0][1] >= 100) {
+                // Add 100 to the return value
                 drawer[0][1] += 100;
+                // Subtract 100 from the reverse argument copy
                 cidCopyRev[0][1] -= 100;
+                // Subtract 100 from the change
                 change -= 100;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -90,11 +96,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 20
         while (change >= 20) {
+            // If the reverse argument copy is greater than or equal to 20
             if (cidCopyRev[1][1] >= 20) {
+                // Add 20 to the return value
                 drawer[1][1] += 20;
+                // Subtract 20 from the reverse argument copy
                 cidCopyRev[1][1] -= 20;
+                // Subtract 20 from the change
                 change -= 20;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -105,11 +117,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 10
         while (change >= 10) { 
+            // If the reverse argument copy is greater than or equal to 10
             if (cidCopyRev[2][1] >= 10) {
+                // Add 10 to the return value
                 drawer[2][1] += 10;
+                // Subtract 10 from the reverse argument copy
                 cidCopyRev[2][1] -= 10;
+                // Subtract 10 from the change
                 change -= 10;
+                // If not
             } else {
+                // Break the while loop
                 break;
             }
         }
@@ -120,11 +138,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 5
         while (change >= 5) {
+            // If the reverse argument copy is greater than or equal to 5
             if (cidCopyRev[3][1] >= 5) {
+                // Add 5 to the return value
                 drawer[3][1] += 5;
+                // Subtract 5 from the reverse argument copy
                 cidCopyRev[3][1] -= 5;
+                // Subtract 5 from the change
                 change -= 5;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -135,11 +159,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 1
         while (change >= 1) {
+            // If the reverse argument copy is greater than or equal to 1
             if (cidCopyRev[4][1] >= 1) {
+                // Add 1 to the return value
                 drawer[4][1] += 1;
+                // Subtract 1 from the reverse argument copy
                 cidCopyRev[4][1] -= 1;
+                // Subtract 1 from the change
                 change -= 1;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -150,11 +180,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 0.25
         while (change >= 0.25) {
+            // If the reverse argument copy is greater than or equal to 0.25
             if (cidCopyRev[5][1] >= 0.25) {
+                // Add 0.25 to the return value
                 drawer[5][1] += 0.25;
+                // Subtract 0.25 from the reverse argument copy
                 cidCopyRev[5][1] -= 0.25;
+                // Subtract 0.25 from the change
                 change -= 0.25;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -165,11 +201,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 0.1
         while (change >= 0.1) {
+            // If the reverse argument copy is greater than or equal to 0.1
             if (cidCopyRev[6][1] >= 0.1) {
+                // Add 0.1 to the return value
                 drawer[6][1] += 0.1;
+                // Subtract 0.1 from the reverse argument copy
                 cidCopyRev[6][1] -= 0.1;
+                // Subtract 0.1 from the change
                 change -= 0.1;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -180,11 +222,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 0.05
         while (change >= 0.05) {
+            // If the reverse argument copy is greater than or equal to 0.05
             if (cidCopyRev[7][1] >= 0.05) {
+                // Add 0.05 to the return value
                 drawer[7][1] += 0.05;
+                // Subtract 0.05 from the reverse argument copy
                 cidCopyRev[7][1] -= 0.05;
+                // Subtract 0.05 from the change
                 change -= 0.05;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -195,11 +243,17 @@ function checkCashRegister(price, cash, cid) {
   
         // While change is greater than or equal to 0.01
         while (change >= 0.01) {
+            // If the reverse argument copy is greater than or equal to 0.01
             if (cidCopyRev[8][1] >= 0.01) {
+                // Add 0.01 to the return value
                 drawer[8][1] += 0.01;
+                // Subtract 0.01 from the reverse argument copy
                 cidCopyRev[8][1] -= 0.01;
+                // Subtract 0.01 from the change
                 change -= 0.01;
+                // If not
             } else {
+                 // Break the while loop
                 break;
             }
         }
@@ -218,14 +272,15 @@ function checkCashRegister(price, cash, cid) {
     // Log the variable for diagnostics
     console.log(statusChange);
 
+    // If change is greater than zero
     if (change > 0) {
-        // return the statusChange
+        // Return the "INSUFFICIENT_FUNDS" statusChange
         return {
             status: "INSUFFICIENT_FUNDS",
             change: []
         }
     }
-    // return the statusChange
+    // Return the statusChange object
     return statusChange;
 }
   
