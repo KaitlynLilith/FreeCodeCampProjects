@@ -1,9 +1,9 @@
 function checkCashRegister(price, cash, cid) {
     // Makes a variable to keep track of change owed and fix it to 2 decimal places
-    var change = (cash - price).toFixed(2);
+    var change = Number((cash - price).toFixed(2));
 
     // Makes a variable that holds the original change amount and fix it to 2 decimal places
-    const unchanged = (cash - price).toFixed(2);
+    const unchanged = Number((cash - price).toFixed(2));
 
     // Copies the array from arguments
     var cidCopy = [...cid];
@@ -49,13 +49,11 @@ function checkCashRegister(price, cash, cid) {
         // Change status to "INSUFFICIENT_FUNDS"
         statusChange.status = "INSUFFICIENT_FUNDS";
         // Log the variable for diagnostics
-        console.log("The third call gets stuck here!!!");
-        // Log the variable for diagnostics
         console.log(statusChange);
         // return the statusChange
         return statusChange;
         // If the sum is equal to unchanged
-    } else if (sum === unchanged) {
+    } else if (sum == unchanged) {
         // Change status to "CLOSED"
         statusChange.status = "CLOSED";
         // Make the change in the return object the original array
